@@ -218,3 +218,9 @@ function App() {
 
 export default App
 ```
+
+**what is `CssBaseline`**
+
+Material-UI provides a CssBaseline component to kickstart an elegant, consistent, and simple baseline to build upon.
+
+check this link: `https://material-ui.com/components/css-baseline/`
