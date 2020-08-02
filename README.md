@@ -1,226 +1,68 @@
-# React-App-Implementing
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## (ساختن قالب پروژه بسیار مهمه)
+## Available Scripts
 
-### قالب اول
-![Screenshot (25)](https://user-images.githubusercontent.com/53907570/89124336-7dba8400-d4eb-11ea-9809-00d06072d154.png)
+In the project directory, you can run:
 
-### قالب دوم
-![Screenshot (26)](https://user-images.githubusercontent.com/53907570/89124380-c6723d00-d4eb-11ea-8ab7-0f720862ea88.png)
+### `npm start`
 
-### قالب سوم
-`index.html`
-![Screenshot (27)](https://user-images.githubusercontent.com/53907570/89124514-ddfdf580-d4ec-11ea-8c0d-eaa798972d02.png)
-as you can see here I just changed the body `dir='rtl'`
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### قالب چهارم
-`manifest.json`
-![Screenshot (28)](https://user-images.githubusercontent.com/53907570/89124569-4e0c7b80-d4ed-11ea-8df7-708a8da452bf.png)
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-### eslint.rc
-```js
-{
-  "extends": [
-    "airbnb",
-    "airbnb/hooks",
-    "plugin:prettier/recommended",
-    "prettier/react",
-    "prettier/standard"
-  ],
-  "plugins": ["prettier"],
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 2018
-  },
-  "rules": {
-    "react/jsx-filename-extension": [
-      1,
-      {
-        "extensions": [".js", ".jsx"]
-      }
-    ],
-    "react/prop-types": 0,
-    "import/imports-first": ["error", "absolute-first"],
-    "import/newline-after-import": "error",
-    "import/prefer-default-export": "off",
-    "react/jsx-props-no-spreading": "off"
-  },
-  "globals": {
-    "window": true,
-    "document": true,
-    "localStorage": true,
-    "FormData": true,
-    "FileReader": true,
-    "Blob": true,
-    "navigator": true,
-    "fetch": true
-  }
-}
-```
+### `npm test`
 
-### .gitignore
-```js
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+### `npm run build`
 
-# testing
-/coverage
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-# production
-/build
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-```
+### `npm run eject`
 
-### .prettierrc
-```js
-{
-  "singleQuote": true,
-  "semi": false,
-  "endOfLine": "auto",
-  "trailingComma": "none"
-}
-```
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-### package.json
-```js
-{
-  "name": "goodreads",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@material-ui/core": "^4.11.0",
-    "@material-ui/icons": "^4.9.1",
-    "@material-ui/lab": "^4.0.0-alpha.52",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "jss-rtl": "^0.3.0",
-    "moment-jalaali": "^0.9.2",
-    "prettier": "^2.0.5",
-    "react": "^16.13.1",
-    "react-code-input": "^3.9.0",
-    "react-dom": "^16.13.1",
-    "react-ga": "^2.7.0",
-    "react-helmet": "^6.0.0",
-    "react-material-ui-carousel": "^1.5.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb": "^18.1.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.1.3",
-    "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "^2.5.0"
-  }
-}
-```
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### Now the most important section `src` folder
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-#### قالب فولدر `src`
-![Screenshot (29)](https://user-images.githubusercontent.com/53907570/89124800-fcfd8700-d4ee-11ea-99c1-a2ccc20cf387.png)
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-#### index.js
-```js
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
-import './assets/css/fontiran.css'
-import App from './App'
-import * as serviceWorker from './serviceWorker'
-import { getDirection } from './localization/index'
+## Learn More
 
-document.getElementsByTagName('body')[0].setAttribute('dir', getDirection())
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-)
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister()
-```
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-#### App.js
-```js
-import React from 'react'
-import { CssBaseline } from '@material-ui/core'
-import { StylesProvider, jssPreset } from '@material-ui/core/styles'
-import { create } from 'jss'
-import rtl from 'jss-rtl'
-import { getDirection } from './localization/index'
-import ThemeProvider from './components/themeProvider'
-import MasterLayout from './screens/MasterLayout'
+### Code Splitting
 
-const jss = create({ plugins: [...jssPreset().plugins, rtl()] })
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-function App() {
-  return getDirection() === 'ltr' ? (
-    <ThemeProvider>
-      <StylesProvider>
-        <CssBaseline />
-        <MasterLayout />
-      </StylesProvider>
-    </ThemeProvider>
-  ) : (
-    <ThemeProvider>
-      <StylesProvider jss={jss}>
-        <CssBaseline />
-        <MasterLayout />
-      </StylesProvider>
-    </ThemeProvider>
-  )
-}
+### Analyzing the Bundle Size
 
-export default App
-```
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-**what is `CssBaseline`**
+### Making a Progressive Web App
 
-Material-UI provides a CssBaseline component to kickstart an elegant, consistent, and simple baseline to build upon.
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-check this link: `https://material-ui.com/components/css-baseline/`
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
